@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='jquery-3.1.0.min.js'></script>
+	<script src='slidePlugin.js'></script>
+	<style type="text/css"> 
+		*{
+			padding:0;
+			margin:0;}
+		.banner{
+			position: relative;
+			height: 200px;
+
+		}
+		.banner li{
+			list-style: none;
+			width: 300px;
+			height: 200px;
+			position: relative;
+			float: left;
+		}
+		.btn{
+			height: 30px;
+			width: 15px;
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			background: #868686;
+			opacity: 0.8;
+			/*适配IE*/
+			filter:alpha(opacity=80);
+		}
+		.btn-l{
+			left: 0;
+		}
+		.btn-r{
+			right: 0;
+		}
+		#j_container{
+			margin:0 auto;
+			position: relative;
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+		}
+
+		.index-node{
+			position: relative;
+			margin:0 auto;
+			height: 15px;
+			line-height: 15px;
+			bottom: 30px;
+		}
+
+		.index-node li{
+			list-style: none;
+			float: left;
+			margin: 10px;
+			border-radius: 50%;
+			border: 1px solid #868686;
+			height: 10px;
+			width: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="j_container">
+	   <ul class="banner j_banner">
+			<li style="background-color:red;"></li>
+			<li style="background-color:yellow;"></li>
+			<li style="background-color:green;"></li>
+	   </ul>
+		<div class="btn btn-l">&lt;</div>
+		<div class="btn btn-r">&gt;</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			$('#j_container').slideWufeng();
+		})
+	</script>
+</body>
+</html>
